@@ -1,0 +1,263 @@
+/*
+==================================================
+
+	Theme Name: 456Ecology
+	Theme URI: http://www.lpd-themes.com
+	Description: 456Ecology Premium WooCommerce Theme
+	Author: lpd-themes
+	Text Domain: 456ecology
+	Author URI: http://support.lpd-themes.com
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.4
+
+
+================================================== */
+.mlab-modal.fades.in {
+    overflow: hidden;
+}
+
+body.themify-popup-style-classic .mfp-close {
+    color: #fff !important;
+    top: 1em;
+    right: 1em;
+	display:none;
+}
+
+body.themify-popup-style-classic .mfp-container
+{
+	background-color:#ffff;
+}
+.page-id-1758 .switcher.notranslate {
+    display: none !important;
+}
+
+.snip1404 .plan {
+
+    width: 100% !important;
+}
+.aio-icon-component, .wpb_column>.wpb_wrapper .aio-icon-component {
+	margin-top: 22px !important;    
+	margin-bottom: -34px !important;
+}
+.aio-icon-left{
+    float: left !important;
+}
+
+
+.aio-icon-component.set_margin_on_botum.style_1 {
+    margin-bottom: -6px !important;
+}
+.aio-ibd-block {
+    margin-left: 31px !important;
+}
+#wpmtst_submit_testimonial{
+	color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    height: 38px;
+    border-radius: 4px;
+}
+#wpmtst_submit_testimonial:hover{
+	color: #yellow;
+    background-color: #5cb85c;
+    border-color: #64ec64;
+    height: 38px;
+    border-radius: 4px;
+}
+#wpmtst_read{
+	color: #fff;
+        background-color: #0d73b0;
+    border-color: #629aca;
+    height: 38px;
+    border-radius: 4px;
+    margin-top: 12px;
+}
+#wpmtst_read:hover{
+	color: #yellow;
+        background-color: #0d73b0;
+    border-color: #629aca;
+    height: 38px;
+    border-radius: 4px;
+}
+input.text {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+#wpmtst_post_content{
+display: block;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+.testimonial-content{
+text-align: justify;
+}
+.snip1404 .plan-title:after {
+    border-color: rgb(13, 115, 176) transparent transparent !important;
+}
+.snip1404 .plan-title {
+    background-color: rgb(13, 115, 176) !important;
+}
+.snip1404 .plan {
+
+    border: 3px solid #0d73b0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: #28ace2;
+}
+.snip1404 header {
+    background-color: #28ace2;
+    color: #ffffff;
+}
+.snip1404 .plan-select a {
+       background-color: #148cd4;
+}
+.snip1404 .plan-select a:hover {
+    background-color: #0d73b0;
+}
+.tt_form_button {
+    background-color: #0d73b0;
+    border-color: #0d73b0;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 300;
+    color: #fff;
+}
+input#postTitle {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+input#_aditional_info_name {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+input#_aditional_info_email {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+textarea#_aditional_info_short_testimonial {
+    width: 100%;
+    padding: 6px 12px;
+    line-height: 20px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s;
+    transition: border-color ease-in-out .15s;
+}
+
+#ttshowcase_0 .tt_theme_speech .ttshowcase_rl_quote_sided .ttshowcase_rl_quote, #ttshowcase_0 .tt_theme_speech .ttshowcase_rl_quote_block .ttshowcase_rl_quote, #ttshowcase_0 .tt_theme_speech .ttshowcase_rl_quote_sided .ttshowcase_rl_quote a, #ttshowcase_0 .tt_theme_speech .ttshowcase_rl_quote_block .ttshowcase_rl_quote a {
+    background: #3787b7 !important;
+    color: #ffffff !important;
+}
+#ttshowcase_0 .tt_theme_speech .ttshowcase_rl_quote_sided .ttshowcase_rl_quote:after {
+    border-color: transparent #3787b7 !important;
+}
+.page-id-410{
+overflow-x:hidden;
+}
+.page-id-1758 #body-wrap{
+display: none !important;
+}
+.snip1404 {
+
+      margin-left: 73px !important;
+
+}
+body{ 
+	font-family: Proxima Nova !important;
+	font-size: 15px !important;
+ }
+.menu3dmega > ul > li > a, .menu3dmega > ul > li > span {
+    font-weight: 600 !important;
+    font-size: 15px !important;
+}
+.not-active {
+  pointer-events: none;
+  cursor: default;
+  text-decoration: none;
+
+}
+.widget-meta.clearfix{
+    display: none;
+}
+.page-id-410 .themify-popup-close {
+    display: none;
+}
+.page-id-410 #header {
+    display: none;
+}
+.page-id-410 #footer{
+    display: none;
+}
+.page-id-410 .footer-bottom dark-theme{
+    display: none;
+}

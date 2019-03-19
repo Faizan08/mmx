@@ -1,0 +1,250 @@
+a {
+  color: #79ad4b;
+}
+.text-primary {
+  color: #79ad4b;
+}
+.btn-primary {
+  background-color: #79ad4b;
+  border-color: #79ad4b;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #79ad4b;
+  border-color: #79ad4b;
+}
+.btn-primary .badge {
+  color: #79ad4b;
+}
+.btn-link {
+  color: #79ad4b;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #79ad4b;
+}
+.label-primary {
+  background-color: #79ad4b;
+}
+.header-bottom-wrap{
+	background-color: #79ad4b;
+}
+.header-content a:hover{
+	color: #79ad4b;
+}
+.lpd_breadcrumb a:hover{
+	color: #79ad4b;
+}
+.footer-meta{
+	background-color: #79ad4b;
+}
+.footer.dark-theme .widget.widget_rss ul li a:hover,
+.footer.dark-theme .widget.widget_pages ul li a:hover,
+.footer.dark-theme .widget.widget_nav_menu ul li a:hover,
+.footer.dark-theme .widget.widget_login ul li a:hover,
+.footer.dark-theme .widget.widget_meta ul li a:hover,
+.footer.dark-theme .widget.widget_categories ul li a:hover,
+.footer.dark-theme .widget.widget_archive ul li a:hover,
+.footer.dark-theme .widget.widget_recent_comments ul li a:hover,
+.footer.dark-theme .widget.widget_recent_entries ul li a:hover{
+	color: #79ad4b;
+}
+.blog-post-title a:hover{
+	color: #79ad4b;
+}
+.cbp-popup-singlePage .cbp-popup-navigation-wrap{
+	background-color: #79ad4b;
+}
+.mega-icon-bg{
+	background-color: #79ad4b;
+}
+.lpd-portfolio-item .title a:hover{
+	color: #79ad4b;
+}
+.pn-btn:hover{
+	color: #79ad4b;
+}
+.wpml-switcher-mobile .flag a:hover{
+	color: #79ad4b;
+}
+.lpd-shopping-cart a.cart-total:hover{
+	color: #79ad4b;
+}
+.menu3dmega > ul > li.open > a,
+.menu3dmega > ul > li:hover > .arrow-icon-bottom:after, 
+.menu3dmega > ul > li:hover > a,
+.menu3dmega > ul > li:hover > a:after,
+.menu3dmega > ul > li:hover > .arrow-icon-bottom{
+}
+.menu3dmega > ul ul li > a.halflings:hover:before{
+	color: #79ad4b;
+}
+.lpd_breadcrumb a:hover{
+	color: #79ad4b;
+}
+.widget.widget_pages ul li a:hover:before,
+.widget.widget_nav_menu ul li a:hover:before,
+.widget.widget_login ul li a:hover:before,
+.widget.widget_meta ul li a:hover:before,
+.widget.widget_categories ul li a:hover:before,
+.widget.widget_archive ul li a:hover:before,
+.widget.widget_recent_comments ul li a:hover:before,
+.widget.widget_recent_entries ul li a:hover:before,
+.widget.widget_rss ul li a:hover,
+.widget.widget_pages ul li a:hover,
+.widget.widget_nav_menu ul li a:hover,
+.widget.widget_login ul li a:hover,
+.widget.widget_meta ul li a:hover,
+.widget.widget_categories ul li a:hover,
+.widget.widget_archive ul li a:hover,
+.widget.widget_recent_comments ul li a:hover,
+.widget.widget_recent_entries ul li a:hover{
+	color: #79ad4b;
+}
+.tagcloud a:hover,
+.tags a:hover{
+	border-color: #79ad4b;
+	background-color: #79ad4b; 
+}
+.blog-post-title a:before{
+	background: #79ad4b;
+}
+.single-post-meta a:hover,
+.blog-post-meta a:hover{
+	color: #79ad4b;
+}
+.theme-option-contacts a:hover{
+	color: #79ad4b;
+}
+.meta-menu a:hover{
+	color: #79ad4b;
+}
+.header-middle-search .search-btn{
+	background-color:#79ad4b;
+}
+.footer-menu li a:hover{
+	color: #79ad4b;
+}
+.lpd-prodcut-accordion .panel-title a.halflings:before{
+	color: #79ad4b;
+}
+.lpd-cart-list-title a:hover{
+	color: #79ad4b;
+}
+.woocommerce .widget_layered_nav ul li a:hover,
+.woocommerce-page .widget_layered_nav ul li a:hover{
+	color: #79ad4b !important;
+}
+.wordpress-456ecology .widget_product_categories ul li a:hover{
+	color: #79ad4b !important;
+}
+.vc_lpd_testiomonial .testiomonial_content:hover:before{
+	border-top-color: #79ad4b;
+}
+.meta-block:hover,
+.vc_lpd_testiomonial .testiomonial_content:hover{
+	border-color: #79ad4b;
+}
+.vc_lpd_testiomonial .testiomonial_content:hover{
+	color: #79ad4b;
+}
+.meta-block:hover .sep-border{
+	background-color: #79ad4b; 
+}
+blockquote:hover{
+	color: #79ad4b;
+	border-color: #79ad4b;
+}
+.callout:hover{
+	border-color: #79ad4b;
+}
+.callout:hover .sep-border{
+	background: #79ad4b;
+}
+.title-404{
+	color:  #79ad4b;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+	background-color: #70a145;
+	border-color: #70a145;
+}
+.dropcap{
+	background: #79ad4b;
+}
+.lpd-product-thumbnail .loop-shop-btn{
+	background-color: #79ad4b;
+}
+.woocommerce .star-rating span,
+.woocommerce-page .star-rating span{
+	color: #79ad4b;
+}
+.wordpress-456ecology .woocommerce ul.cart_list li a:hover,
+.wordpress-456ecology .woocommerce ul.product_list_widget li a:hover,
+.wordpress-456ecology.woocommerce-page ul.cart_list li a:hover,
+.wordpress-456ecology.woocommerce-page ul.product_list_widget li a:hover{
+	color: #79ad4b !important;
+}
+/* cubeportfolio */
+.cbp-l-filters-button .cbp-filter-counter{
+	background-color: #79ad4b;
+}
+.cbp-l-filters-button .cbp-filter-counter:before{
+	border-top-color: #79ad4b;
+}
+.cbp-popup-singlePage .cbp-l-project-desc-title span,
+.cbp-popup-singlePage .cbp-l-project-details-title span{
+	border-bottom-color: #79ad4b;
+}
+.cbp-l-filters-alignCenter .cbp-filter-item:hover {
+    color: #79ad4b;
+}
+.cbp-l-filters-alignCenter .cbp-filter-item-active {
+    color: #79ad4b;
+}
+.cbp-l-filters-alignCenter .cbp-filter-counter{
+    background: #79ad4b;
+}
+.cbp-l-filters-alignCenter .cbp-filter-counter:before{
+	border-top-color: #79ad4b;
+}
+.cbp-l-filters-alignRight .cbp-filter-counter:before{
+	border-top-color: #79ad4b;
+}
+.cbp-l-filters-alignRight .cbp-filter-counter{
+    background: #79ad4b;
+}
+.cbp-l-grid-blog-comments:hover{
+    color: #79ad4b;
+}
+.cbp-l-filters-list .cbp-filter-item-active{
+    background-color: #79ad4b;
+}
+.cbp-l-filters-list .cbp-filter-item{
+	border-color: #79ad4b;
+}
+/* cubeportfolio */
+.cbp-l-filters-alignLeft .cbp-filter-item-active {
+    /* @editable properties */
+    background-color: #70a145;
+    border-color: #70a145;
+}
+.cbp-l-filters-dropdownWrap {
+    background: #70a145;
+}
