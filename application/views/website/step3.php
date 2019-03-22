@@ -1,29 +1,57 @@
+
 <?php 
 
-if ($_POST) {
+if ($_GET) {
 
-
-$array=explode(",", $_POST['choosen-sits']);
+    ?>
+    <h4 style = "color: white"> Seats :
+    <?php 
+$array=explode(",", $_GET['choosen-sits']);
 for ($i=0; $i < count($array); $i++) { 
   $final[]=$array[$i];
+   echo $final[$i];
 }
+?>
+</h4>
+
+<?php
+
 $trimmed_array=array_map('trim',$final);
 $array2=array_unique($trimmed_array);
 
-$_SESSION['cart']['movie_name']=$_POST['movie_name'];
-$_SESSION['cart']['productID']=$_POST['productID'];
-$_SESSION['cart']['date_time']=$_POST['date_time'];
-$_SESSION['cart']['cinema_name']=$_POST['cinema_name'];
-$_SESSION['cart']['show_time']=$_POST['show_time'];
+$_SESSION['cart']['movie_name']=$_GET['movie_name'];
+$_SESSION['cart']['date_time']=$_GET['date_time'];
+$_SESSION['cart']['cinema_name']=$_GET['cinema_name'];
+$_SESSION['cart']['show_time']=$_GET['show_time'];
 $_SESSION['cart']['seats']=$array2;
+
+$_SESSION['cart']['movie_id']=$_GET['movie_id'];
+$_SESSION['cart']['show_time_id']=$_GET['show_time_id'];
+$_SESSION['cart']['distributer_id']=$_GET['distributer_id'];
 
 }
 
-
  ?>
 
- <br>
-        
+
+<h4 style = "color: white"> Movie Name : <?php echo $_SESSION['cart']['movie_name']; ?> </h4>
+
+<h4 style = "color: white"> Date : <?php echo $_SESSION['cart']['date_time']; ?></h4>
+
+<h4 style = "color: white"> Cinema Id : <?php echo $_SESSION['cart']['cinema_name']; ?></h4>
+
+<h4 style = "color: white">Time : <?php echo $_SESSION['cart']['show_time']; ?></h4>
+
+<h4 style = "color: white"> ShowTime id :<?php echo $_SESSION['cart']['show_time_id'];?></h4>
+
+<h4 style = "color: white"> Movie Id :<?php echo $_SESSION['cart']['movie_id']; ?></h4>
+
+<h4 style = "color: white"> Distributer id : <?php echo $_SESSION['cart']['distributer_id']; ?></h4>
+
+<?php
+    
+?>
+
         <!-- Main content -->
         <section class="container">
             <div class="order-container">
@@ -49,28 +77,32 @@ $_SESSION['cart']['seats']=$array2;
                         <li class="book-result__item">Cinema: <span class="book-result__count booking-ticket"><?php echo $_SESSION['cart']['cinema_name'] ?></span></li>
                         <li class="book-result__item">Seats: <span class="book-result__count booking-ticket"><?php echo count($_SESSION['cart']['seats']) ?></span></li>
                         <li class="book-result__item">One item price: <span class="book-result__count booking-price">
-                        <?php if ($_SESSION['cart']['cinema_name']=="Cinema 1"): 
-                          $price=500;
+
+                        <?php if ($_SESSION['cart']['cinema_name']=="1"): 
+                          $price=1;
+                          $ticket_Id = 2;
                         ?>
+
                         <?php endif ?>
-                        <?php if ($_SESSION['cart']['cinema_name']=="Cinema 2"): 
-                          $price=400;
+                        <?php if ($_SESSION['cart']['cinema_name']=="2"): 
+                          $price=2;
+                          $ticket_Id = 1;
                         ?>
-                            
+
                         <?php endif ?>
                        Rs : <?php echo $price; ?>
                         </span></li>
                         <li class="book-result__item">Total: <span class="book-result__count booking-cost">
                          
 
-Rs <?php 
-$count=count($_SESSION['cart']['seats']);
-echo $totalamount= $count*$price;
- ?>
+                        Rs <?php 
+                        $count=count($_SESSION['cart']['seats']);
+                        echo $totalamount= $count*$price;   
+                         ?>
                         </span></li>
                     </ul>
 
-<?php if (!empty($_SESSION['adminID'])){ ?>
+                    <?php if (!empty($_SESSION['adminID'])){ ?>
  <!--
                     <h2 class="page-heading">Choose payment method</h2>
                     <div class="payment">-->
@@ -121,9 +153,8 @@ echo $totalamount= $count*$price;
                          
                         </div>
                         <div class="order">
-                    <!--<a href="<?php echo base_url() ?>web/checkout" class="btn btn-md btn--warning btn--wide"></a>-->
-                    <button type="submit" class="btn btn-md btn--warning btn--wide"></button>
-                </div>
+                        <button type="submit" class="btn btn-md btn--warning btn--wide"></button>
+                        </div>
                     </form>
 
                 

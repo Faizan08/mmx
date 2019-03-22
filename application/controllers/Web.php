@@ -5,9 +5,6 @@
 */
 class Web extends CI_Controller
 {
-	
-
-
     public function is_login()
     {
     	if (empty($_SESSION['adminID'])) {
@@ -47,16 +44,31 @@ class Web extends CI_Controller
 		//$data['sliders']=$this->admin_model->get("slider");
 		$data['sliders']=$this->admin_model->raw_query("SELECT * FROM  `slider` ORDER BY sliderID DESC limit 6",1 );
 	/*	$data['sliders']=$this->admin_model->raw_query("SELECT * FROM  `slider` ORDER BY sliderID DESC ",1);*/
-		$data['best_choice']=$this->admin_model->raw_query("SELECT * FROM  `products` WHERE `best_choice`=1 ORDER BY productid DESC limit 6",1 );
-  		
-		$data['featured']=$this->admin_model->raw_query("SELECT * FROM `products` WHERE `status` = 'Featured'=1 ORDER BY productid DESC limit 8",1 );
+
+
+
+
+		// $data['best_choice']=$this->admin_model->raw_query("SELECT * FROM  `products` WHERE `best_choice`=1 ORDER BY productid DESC limit 6",1 );
+
+
+		// $data['best_choice']=$this->admin_model->raw_query("SELECT * FROM  `products` WHERE `best_choice`=1 ORDER BY productid DESC limit 6",1 );
+
+
+  		$data['featured_movies']=$this->admin_model->raw_query("select web_movies.*, featured_movies.featured, products.categoryID from web_movies JOIN featured_movies ON web_movies.movie_id = featured_movies.movie_id JOIN products ON web_movies.movie_id = products.movie_id where featured_movies.featured = 'Yes' ORDER BY movie_id limit 6" ,1);
+
+
+// print_r($data['featured_movies']);
+// die();
+
+
+		// $data['featured']=$this->admin_model->raw_query("SELECT * FROM `products` WHERE `status` = 'Featured'=1 ORDER BY productid DESC limit 8",1 );
 		$data['title']="Now Showing";
 		$start = date('Y-m-d');
 
 		$end = date('Y-m-d', strtotime('+30 day'));
 		
 		/*booking process start*/
-		$data['movies']=$this->admin_model->raw_query("select web_movies.*, web_show_times.date,web_show_times.time,web_show_times.screen_id from web_movies JOIN web_show_times ON web_movies.movie_id = web_show_times.movie_id where web_show_times.date != '' and web_show_times.date >= '".$start."' and web_show_times.date <= '".$end."' group by web_movies.movie_id DESC" ,1);
+		$data['movies']=$this->admin_model->raw_query("select web_movies.*, web_show_times.date,web_show_times.time,web_show_times.screen_id,products.categoryID, products.year from web_movies JOIN web_show_times ON web_movies.movie_id = web_show_times.movie_id JOIN products ON web_movies.movie_id = products.movie_id where web_show_times.date != '' and web_show_times.date >= '".$start."' and web_show_times.date <= '".$end."' group by web_movies.movie_id DESC" ,1);
 
 		
 		/*booking process end*/
@@ -367,22 +379,24 @@ class Web extends CI_Controller
     public function get_movies_dates($id)
 	{
 		$this->db->select('*')
-				 ->from('show_time')
-				 ->where('productID',$id)
-				 ->where('STR_TO_DATE(showdate,"%Y-%m-%d") >=',date('Y-m-d'))
-				 ->group_by('showdate');
+				 ->from('web_show_times')
+				 ->where('movie_id',$id)
+				 // ->where('STR_TO_DATE(showdate,"%Y-%m-%d") >=',date('Y-m-d'))
+				 ->group_by('date');
 		$date = $this->db->get()->result_array();
 		//$date = $this->admin_model->select_where('show_time',array('productID'=>$id));
 		echo json_encode($date);
 	}
 
+
+
 	public function get_movies_ciname($id,$date)
 	{
-		$this->db->select('cinema_name')
-				 ->from('show_time')
-				 ->where('productID',$id)
-				 ->where('showdate',$date)
-				 ->group_by('cinema_name');
+		$this->db->select('screen_id')
+				 ->from('web_show_times')
+				 ->where('movie_id',$id)
+				 ->where('date',$date)
+				 ->group_by('screen_id');
 		$date = $this->db->get()->result_array();
 		//$date = $this->admin_model->select_where('show_time',array('productID'=>$id));
 		echo json_encode($date);
@@ -391,16 +405,23 @@ class Web extends CI_Controller
 	public function get_movies_time($id,$date,$cinema)
 	{
 		$cinema = str_replace('%20', ' ', $cinema);
-		$this->db->select('group_concat(showtime separator ",") as times')
-				 ->from('show_time')
-				 ->where('productID',$id)
-				 ->where('showdate',$date)
-				 ->where('cinema_name',$cinema)
-				 ->group_by('productID');
-		$date = $this->db->get()->row_array();
-		$date = explode(',', $date['times']);
-		//print_r($this->db->last_query());
-		//$date = $this->admin_model->select_where('show_time',array('productID'=>$id));
+		$this->db->select('group_concat(time separator ",") as times,web_show_times.show_time_id ')
+				 ->from('web_show_times')
+				 ->where('movie_id',$id)
+				 ->where('date',$date)
+				 ->where('screen_id',$cinema);
+				 // ->group_by('show_time_id');
+			$data = $this->db->get()->row_array();
+
+		  // $date = $data(['show_time_id']);
+		  $date = explode(',', $data['times']);
+		  // $date = $data['web_show_times.show_time_id'];
+
+		 // print_r($date);
+		 // print_r($show_time_id);
+		 // die();
+		 // print_r($this->db->last_query());
+		 // $date = $this->admin_model->select_where('show_time',array('productID'=>$id));
 		echo json_encode($date);
 	}
 	public function search()
@@ -410,17 +431,49 @@ class Web extends CI_Controller
 		//echo $type;die;
 		$data['title']="Search";
 		$value = $this->input->post('search');
-		$data['movies']=$this->admin_model->raw_query("select products.*, show_time.showdate from products JOIN show_time ON products.productID = show_time.productID where ".$type." like '%".$value."%' group by products.productID DESC" ,1);
+
+		// print_r($type);
+		// die();
+
+
+		// $data['movies']=$this->admin_model->raw_query("select products.*, show_time.showdate from products JOIN show_time ON products.productID = show_time.productID where ".$type." like '%".$value."%' group by products.productID DESC" ,1);
+
+
+// My query
+
+		if($type == "actor"){
+
+			$data['movies']=$this->admin_model->raw_query("select web_movies.*, web_show_times.*, products.* from web_movies JOIN web_show_times ON web_movies.movie_id = web_show_times.movie_id JOIN products ON web_movies.movie_id = products.movie_id where ".$type." like '%".$value."%' group by web_movies.movie_id DESC" ,1);
+		}
+		else{
+			$data['movies']=$this->admin_model->raw_query("select products.*, web_movies.*,web_show_times.* from products JOIN web_movies ON products.movie_id = web_movies.movie_id JOIN web_show_times ON products.movie_id = web_show_times.movie_id where ".$type." like '%".$value."%' group by products.productID DESC" ,1);
+		}
+		
+
+
+		// $data['movies']=$this->admin_model->raw_query("select web_movies.*, web_show_times.date from web_movies JOIN web_show_times ON web_movies.movie_id = web_show_times.movie_id where ".$type." like '%".$value."%' group by web_movies.movie_id DESC" ,1);
+
+		// print_r($data['movies']);
+
+		// die();
+
+
+
+
 		//echo '<pre>';print_r($data['movies']);die;
 		$this->load->view('website/header',$data);
 		$this->load->view('website/search');
 	}
-	public function details($productID)
+	public function details($movie_id)
 	{
-		$where=array('productID'=>$productID);
-        $this->db->query("update products set total_views=total_views+1 where 								productID=".$productID);
-        $data['detail']=$this->admin_model->get_row("products",$where);
-        $data['showtime']=$this->admin_model->get_row("show_time",$where);
+		$where=array('movie_id'=>$movie_id);
+        $this->db->query("update products set total_views=total_views+1 where 								movie_id=".$movie_id);
+        $data['detail']=$this->admin_model->get_row("web_movies",$where);
+        $data['showtime']=$this->admin_model->get_row("web_show_times",$where);
+
+        $data['moviedetails']=$this->admin_model->get_row("products",$where);
+
+       
         $data['title']="Mega Multiplex | ".$data['detail']['title'];
 		$this->load->view('website/header',$data);
 		$this->load->view('website/details');
@@ -456,8 +509,9 @@ class Web extends CI_Controller
 		 // die();
 		// $data['show_time'] = $this->admin_model->select_where('show_time',array('productID' => $showtimeID));
 		 
-		  $data['detail']=$this->admin_model->get_row("web_movies",$where);
+		$data['detail']=$this->admin_model->get_row("web_movies",$where);
 
+		$data['moviedetails']=$this->admin_model->get_row("products",$where);
 
         $data['showtime']=$this->admin_model->select_where("web_show_times",array('movie_id'=>$_GET['movieID'],'date <='=>$end));
 
@@ -774,42 +828,73 @@ endforeach ?>
 	// }
 	public function step2()
 	{
-	   
-		//error_reporting('-1');
-		// echo'
-		// <pre>';
-	   $show_time_id = $_GET['show_time_id'];
-
-        // $showtimedata=$this->admin_model->get_row("show_time",$show_time_id);
-        // $showtimedata
-
-
-			$this->db->select('web_show_times.*')
-				->from('web_show_times')
-				->where('show_time_id =', $show_time_id); 
-			
-			$data['movies_data'] = $this->db->get()->row_array();
-
-
-			// sprint_r($data['movies_data']);
-// die();	
- 		// print_r("http://103.245.195.171:7778/api/fatchbooking/".$show_time_id);
+		// print_r($_GET);
 		// die();
+
+
+		//new
+		// if( $_GET['show_time_id']){
+	 //   $show_time_id = $_GET['show_time_id'];
+
+		// }
+		// else{
+		// 	$timeid = $_GET['timeid'];
+	 //   		$movieid = $_GET['movie_id'];
+	 //   		$datetime = $_GET['date_time'];
+	 //   		$cinema = $_GET['cinema'];
+
+
+
+	 //   $this->db->select('web_show_times.show_time_id')
+		// 	->from('web_show_times')
+		// 	->where('movie_id =', $movieid)
+		// 	->where('date_time =', $datetime) 
+		// 	->where('screen_id =', $cinema) 
+		// 	->where('time =', $timeid); 
+
+		
+		// $data['show_time_id'] = $this->db->get()->row_array();
+		// }
+
+
+	    $show_time_id = $_GET['show_time_id'];
+
+		$this->db->select('web_show_times.*')
+			->from('web_show_times')
+			->where('show_time_id =', $show_time_id); 
+		
+		$data['movies_data'] = $this->db->get()->row_array();
+
+
 	    $url = "http://103.245.195.171:7778/api/fatchbooking/".$show_time_id;
-	    $ch = curl_init();
-	    curl_setopt($ch,CURLOPT_URL,$url);
-	    curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
-	    curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
-	    $json = curl_exec($ch);
-	    if(!$json) {
-	        echo curl_error($ch);
-	    }
-	    curl_close($ch);
-	     $this->data['API_Data'] = $json_decode = json_encode($json);
-	    
-	     // echo '<pre>';
-	     // print_r($this->data['API_Data']);
-	     // die();
+	   	$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL,$url);
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,1);
+		curl_setopt($ch,CURLOPT_CONNECTTIMEOUT, 4);
+		$json = curl_exec($ch);
+		if(!$json) {
+		    echo curl_error($ch);
+		}
+		curl_close($ch);
+		 
+		 $this->data['API_Data'] = json_decode($json);
+	   
+		
+		$consignment_data = [];	
+
+	    $count = count($this->data['API_Data']);
+	     // echo $this->data['API_Data']['0']->seatNumber;
+		for ($i=0; $i < $count; $i++) {
+
+			$seatNum[$i] = $this->data['API_Data'][$i]->seatNumber;
+	 			
+	 		$this->data['seat'] = $seatNum[$i];
+
+			array_push($consignment_data, $this->data['seat'] );
+
+		 }
+			$this->data['selected_data']  = $consignment_data;
+			
 
 
 	    // work proper start
@@ -828,6 +913,7 @@ endforeach ?>
 		$this->load->view('website/header');
 		$this->load->view('website/step3');
 		$this->load->view('website/footer');
+
 	}
 	public function come_page()
 	{
@@ -936,9 +1022,9 @@ endforeach ?>
 					'user_id' => $_SESSION['adminID'],
 					'user_name' => $_SESSION['user_name'],
 					'phone_number' => $_POST['phone_number'],
-					//'email' => $_POST['email'],
+					 //'email' => $_POST['email'],
 					'user_cnic' => $_POST['user_cnic'],
-					'productID' => $_SESSION['cart']['productID'],
+					'productID' => $_SESSION['cart']['movie_id'],
 					'date_time' => date('Y-m-d', strtotime($_SESSION['cart']['date_time'])),
 					'cinema_name' => $_SESSION['cart']['cinema_name'],
 					'show_time' => $_SESSION['cart']['show_time'],
@@ -950,11 +1036,11 @@ endforeach ?>
 				redirect('web');
 			}
 		}
-		if ($_SESSION['cart']['cinema_name']=="Cinema 1"){ 
-            $price=500;
+		if ($_SESSION['cart']['cinema_name']==1){ 
+            $price=1;
         }
-        if ($_SESSION['cart']['cinema_name']=="Cinema 2"){ 
-            $price=400;
+        if ($_SESSION['cart']['cinema_name']==2){ 
+            $price=2;
         }
         // cc remover kerny ky liye paymentMethod var ko comment kerna hai or form se paymentMethod input htana hai
         $count=count($_SESSION['cart']['seats']);

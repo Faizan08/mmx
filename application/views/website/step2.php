@@ -1,9 +1,9 @@
 <?php 
 // print_r($list);
-// $key = array_search("A-6",$list); 
+// $key = array_search("A-6",$this->data['selected_data']); 
 // print_r($key);
 // echo '<br>';
-// print_r(array_key_exists($key,$list));die;
+// print_r(array_key_exists($key,$this->data['selected_data']));die;
 //error_reporting('-1');
 //$cinema=($show['cinema_name']);
 $cinema=explode("_",$_GET['time']);
@@ -142,8 +142,8 @@ $cinema=explode("_",$_GET['time']);
                         <br>
                             <div class="sits__row">
                                  <?php 
-                                    $key = array_search("A-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -153,8 +153,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" style="<?php  echo "color:$seatColor;" ?>" data-place='A-1' data-price='10'>A-1</span>
                                  <?php 
-                                    $key = array_search("A-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -166,8 +166,8 @@ $cinema=explode("_",$_GET['time']);
 
 
                                 <?php 
-                                    $key = array_search("A-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -179,8 +179,8 @@ $cinema=explode("_",$_GET['time']);
 
 
                                  <?php 
-                                    $key = array_search("A-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -190,9 +190,9 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-4' data-price='10'>A-4</span>
                                  <?php 
-                                    $key = array_search("A-5",$list); 
-                                    print_r(array_key_exists($key,$list));
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-5",$this->data['selected_data']); 
+                                    print_r(array_key_exists($key,$this->data['selected_data']));
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -202,19 +202,19 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-5' data-price='10'>A-5</span>
                                 <?php 
-                                    $key = array_search("A-6",$list); 
+                                    $key = array_search("A-6",$this->data['selected_data']); 
                                     $class = '';
                                     echo $key;
                                     if($key > -1){
-                                        if (array_key_exists($key,$list)){
+                                        if (array_key_exists($key,$this->data['selected_data'])){
                                             $class = 'sits-state--not';
                                         }
                                     }
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-6' data-price='10'>A-6</span>
                                 <?php 
-                                    $key = array_search("A-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -224,8 +224,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap  <?php echo $class ?>" data-place='A-7' data-price='10'>A-7</span>
                                 <?php 
-                                    $key = array_search("A-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -235,8 +235,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-8' data-price='10'>A-8</span>
                                 <?php 
-                                    $key = array_search("A-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -246,8 +246,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-9' data-price='10'>A-9</span>
                                 <?php 
-                                    $key = array_search("A-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -255,10 +255,10 @@ $cinema=explode("_",$_GET['time']);
                                         $class = '';
                                     }
                                 ?>
-                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A1-0' data-price='10'>A-10</span>
+                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-10' data-price='10'>A-10</span>
                                 <?php 
-                                    $key = array_search("A-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -266,13 +266,13 @@ $cinema=explode("_",$_GET['time']);
                                         $class = '';
                                     }
                                 ?>
-                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A1-1' data-price='10'>A-11</span>
+                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-11' data-price='10'>A-11</span>
                             </div>
                             
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("B-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -282,8 +282,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-1' data-price='10'>B-1</span>
                                 <?php 
-                                    $key = array_search("B-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -293,8 +293,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-2' data-price='10'>B-2</span>
                                 <?php 
-                                    $key = array_search("B-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -304,8 +304,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-3' data-price='10'>B-3</span>
                                 <?php 
-                                    $key = array_search("B-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -315,8 +315,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-4' data-price='10'>B-4</span>
                                 <?php 
-                                    $key = array_search("B-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -326,8 +326,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-5' data-price='10'>B-5</span>
                                 <?php 
-                                    $key = array_search("B-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -337,8 +337,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-6' data-price='10'>B-6</span>
                                 <?php 
-                                    $key = array_search("B-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -348,8 +348,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-7' data-price='10'>B-7</span>
                                 <?php 
-                                    $key = array_search("B-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -359,8 +359,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-8' data-price='10'>B-8</span>
                                 <?php 
-                                    $key = array_search("B-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -370,8 +370,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-9' data-price='10'>B-9</span>
                                 <?php 
-                                    $key = array_search("B-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -379,13 +379,13 @@ $cinema=explode("_",$_GET['time']);
                                         $class = '';
                                     }
                                 ?>
-                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B1-0' data-price='10'>B-10</span>
+                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-10' data-price='10'>B-10</span>
                             </div>
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("C-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -395,8 +395,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-1' data-price='10'>C-1</span>
                                 <?php 
-                                    $key = array_search("C-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -406,8 +406,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-2' data-price='10'>C-2</span>
                                 <?php 
-                                    $key = array_search("C-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -417,8 +417,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-3' data-price='10'>C-3</span>
                                 <?php 
-                                    $key = array_search("C-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -428,8 +428,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-4' data-price='10'>C-4</span>
                                 <?php 
-                                    $key = array_search("C-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -439,8 +439,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-5' data-price='10'>C-5</span>
                                 <?php 
-                                    $key = array_search("C-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -450,8 +450,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-6' data-price='10'>C-6</span>
                                 <?php 
-                                    $key = array_search("C-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -461,8 +461,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-7' data-price='10'>C-7</span>
                                 <?php 
-                                    $key = array_search("C-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -472,8 +472,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-8' data-price='10'>C-8</span>
                                 <?php 
-                                    $key = array_search("C-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -483,8 +483,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-9' data-price='10'>C-9</span>
                                 <?php 
-                                    $key = array_search("C-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -492,10 +492,10 @@ $cinema=explode("_",$_GET['time']);
                                         $class = '';
                                     }
                                 ?>
-                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C1-0' data-price='10'>C-10</span>
+                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-10' data-price='10'>C-10</span>
                                 <?php 
-                                    $key = array_search("C-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -503,13 +503,13 @@ $cinema=explode("_",$_GET['time']);
                                         $class = '';
                                     }
                                 ?>
-                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C1-1' data-price='10'>C-11</span>
+                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-11' data-price='10'>C-11</span>
                             </div>
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("D-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -519,8 +519,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-1' data-price='10'>D-1</span>
                                 <?php 
-                                    $key = array_search("D-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -530,8 +530,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-2' data-price='10'>D-2</span>
                                 <?php 
-                                    $key = array_search("D-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -541,8 +541,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-3' data-price='10'>D-3</span>
                                 <?php 
-                                    $key = array_search("D-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -552,8 +552,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-4' data-price='10'>D-4</span>
                                 <?php 
-                                    $key = array_search("D-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -563,8 +563,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-5' data-price='10'>D-5</span>
                                 <?php 
-                                    $key = array_search("D-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -574,8 +574,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-6' data-price='10'>D-6</span>
                                 <?php 
-                                    $key = array_search("D-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -585,8 +585,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-7' data-price='10'>D-7</span>
                                 <?php 
-                                    $key = array_search("D-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -596,8 +596,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-8' data-price='10'>D-8</span>
                                 <?php 
-                                    $key = array_search("D-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -607,8 +607,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-9' data-price='10'>D-9</span>
                                 <?php 
-                                    $key = array_search("D-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -616,13 +616,13 @@ $cinema=explode("_",$_GET['time']);
                                         $class = '';
                                     }
                                 ?>
-                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D1-0' data-price='10'>D-10</span>
+                                <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-10' data-price='10'>D-10</span>
                             </div>
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("E-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -632,8 +632,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-1' data-price='20'>E-1</span>
                                 <?php 
-                                    $key = array_search("E-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -643,8 +643,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-2' data-price='20'>E-2</span>
                                 <?php 
-                                    $key = array_search("E-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -654,8 +654,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-3' data-price='20'>E-3</span>
                                 <?php 
-                                    $key = array_search("E-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -666,12 +666,9 @@ $cinema=explode("_",$_GET['time']);
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-4' data-price='20'>E-4</span>
 
 
-
-
-
                                 <?php 
-                                    $key = array_search("E-5",$API_Data['seatNumber']); 
-                                    if (array_key_exists($key,$API_Data['seatNumber'])){
+                                    $key = array_search("E-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
 
                                     }
@@ -681,18 +678,15 @@ $cinema=explode("_",$_GET['time']);
                                         
                                     }
                                 ?>
+
+
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-5' data-price='20'>E-5</span>
-
-
-
-
-
 
                                 <?php 
 
-                                    $key = array_search("E-6",$API_Data['seatNumber']); 
-                                    echo $API_Data['seatNumber'];
-                                    if (array_key_exists($key,$API_Data['seatNumber'])){
+                                    $key = array_search("E-6",$this->data['selected_data']); 
+                                    
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -702,8 +696,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-6' data-price='20'>E-6</span>
                                 <?php 
-                                    $key = array_search("E-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -713,8 +707,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-7' data-price='20'>E-7</span>
                                 <?php 
-                                    $key = array_search("E-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -724,8 +718,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-8' data-price='20'>E-8</span>
                                 <?php 
-                                    $key = array_search("E-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -735,8 +729,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-9' data-price='20'>E-9</span>
                                 <?php 
-                                    $key = array_search("E-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -746,8 +740,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-10' data-price='20'>E-10</span>
                                 <?php 
-                                    $key = array_search("E-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -760,8 +754,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("F-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -771,8 +765,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-1' data-price='20'>F-1</span>
                                 <?php 
-                                    $key = array_search("F-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -782,8 +776,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-2' data-price='20'>F-2</span>
                                 <?php 
-                                    $key = array_search("F-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -793,8 +787,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-3' data-price='20'>F-3</span>
                                 <?php 
-                                    $key = array_search("F-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -804,8 +798,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-4' data-price='20'>F-4</span>
                                 <?php 
-                                    $key = array_search("F-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -815,8 +809,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-5' data-price='20'>F-5</span>
                                 <?php 
-                                    $key = array_search("F-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -826,8 +820,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-6' data-price='20'>F-6</span>
                                 <?php 
-                                    $key = array_search("F-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -837,8 +831,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-7' data-price='20'>F-7</span>
                                 <?php 
-                                    $key = array_search("F-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -848,8 +842,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-8' data-price='20'>F-8</span>
                                 <?php 
-                                    $key = array_search("F-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -859,8 +853,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-9' data-price='20'>F-9</span>
                                 <?php 
-                                    $key = array_search("F-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -873,8 +867,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("G-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -884,8 +878,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-1' data-price='20'>G-1</span>
                                 <?php 
-                                    $key = array_search("G-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -895,8 +889,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-2' data-price='20'>G-2</span>
                                 <?php 
-                                    $key = array_search("G-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -906,8 +900,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-3' data-price='20'>G-3</span>
                                 <?php 
-                                    $key = array_search("G-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -917,8 +911,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-4' data-price='20'>G-4</span>
                                 <?php 
-                                    $key = array_search("G-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -928,8 +922,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-5' data-price='20'>G-5</span>
                                 <?php 
-                                    $key = array_search("G-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -939,8 +933,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-6' data-price='20'>G-6</span>
                                 <?php 
-                                    $key = array_search("G-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -950,8 +944,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-7' data-price='20'>G-7</span>
                                 <?php 
-                                    $key = array_search("G-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -961,8 +955,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-8' data-price='20'>G-8</span>
                                 <?php 
-                                    $key = array_search("G-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -972,8 +966,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-9' data-price='20'>G-9</span>
                                 <?php 
-                                    $key = array_search("G-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -983,8 +977,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-10' data-price='20'>G-10</span>
                                 <?php 
-                                    $key = array_search("G-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -997,8 +991,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("H-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1008,8 +1002,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-1' data-price='20'>H-1</span>
                                 <?php 
-                                    $key = array_search("H-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1019,8 +1013,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-2' data-price='20'>H-2</span>
                                 <?php 
-                                    $key = array_search("H-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1030,8 +1024,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-3' data-price='20'>H-3</span>
                                 <?php 
-                                    $key = array_search("H-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1041,8 +1035,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-4' data-price='20'>H-4</span>
                                 <?php 
-                                    $key = array_search("H-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1052,8 +1046,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-5' data-price='20'>H-5</span>
                                 <?php 
-                                    $key = array_search("H-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1063,8 +1057,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-6' data-price='20'>H-6</span>
                                 <?php 
-                                    $key = array_search("H-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1074,8 +1068,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-7' data-price='20'>H-7</span>
                                 <?php 
-                                    $key = array_search("H-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1085,8 +1079,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-8' data-price='20'>H-8</span>
                                 <?php 
-                                    $key = array_search("H-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1096,8 +1090,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-9' data-price='20'>H-9</span>
                                 <?php 
-                                    $key = array_search("H-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1110,8 +1104,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row additional-margin">
                                 <?php 
-                                    $key = array_search("I-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1121,8 +1115,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-1' data-price='30'>I1</span>
                                 <?php 
-                                    $key = array_search("I-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1132,8 +1126,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-2' data-price='30'>I-2</span>
                                 <?php 
-                                    $key = array_search("I-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1143,8 +1137,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-3' data-price='30'>I-3</span>
                                 <?php 
-                                    $key = array_search("I-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1154,8 +1148,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-4' data-price='30'>I-4</span>
                                 <?php 
-                                    $key = array_search("I-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1165,8 +1159,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-5' data-price='30'>I-5</span>
                                 <?php 
-                                    $key = array_search("I-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1176,8 +1170,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-6' data-price='30'>I-6</span>
                                 <?php 
-                                    $key = array_search("I-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1187,8 +1181,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-7' data-price='30'>I-7</span>
                                 <?php 
-                                    $key = array_search("I-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1198,8 +1192,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-8' data-price='30'>I-8</span>
                                 <?php 
-                                    $key = array_search("I-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1209,8 +1203,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-9' data-price='30'>I-9</span>
                                 <?php 
-                                    $key = array_search("I-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1220,8 +1214,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-10' data-price='30'>I-10</span>
                                 <?php 
-                                    $key = array_search("I-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1233,8 +1227,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("J-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1244,8 +1238,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-1' data-price='30'>J-1</span>
                                 <?php 
-                                    $key = array_search("J-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1255,8 +1249,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-2' data-price='30'>J-2</span>
                                 <?php 
-                                    $key = array_search("J-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1266,8 +1260,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-3' data-price='30'>J-3</span>
                                 <?php 
-                                    $key = array_search("J-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1277,8 +1271,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-4' data-price='30'>J-4</span>
                                 <?php 
-                                    $key = array_search("J-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1288,8 +1282,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-5' data-price='30'>J-5</span>
                                 <?php 
-                                    $key = array_search("J-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1299,8 +1293,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-6' data-price='30'>J-6</span>
                                 <?php 
-                                    $key = array_search("J-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1310,8 +1304,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-7' data-price='30'>J-7</span>
                                 <?php 
-                                    $key = array_search("J-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1321,8 +1315,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-8' data-price='30'>J-8</span>
                                 <?php 
-                                    $key = array_search("J-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1332,8 +1326,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='J-9' data-price='30'>J-9</span>
                                 <?php 
-                                    $key = array_search("J-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("J-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1346,8 +1340,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("K-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1357,8 +1351,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-1' data-price='30'>K-1</span>
                                 <?php 
-                                    $key = array_search("K-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1368,8 +1362,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-2' data-price='30'>K-2</span>
                                 <?php 
-                                    $key = array_search("K-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1379,8 +1373,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-3' data-price='30'>K-3</span>
                                 <?php 
-                                    $key = array_search("K-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1390,8 +1384,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-4' data-price='30'>K-4</span>
                                 <?php 
-                                    $key = array_search("K-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1401,8 +1395,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-5' data-price='30'>K-5</span>
                                 <?php 
-                                    $key = array_search("K-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1412,8 +1406,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-6' data-price='30'>K-6</span>
                                 <?php 
-                                    $key = array_search("K-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1423,8 +1417,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-7' data-price='30'>K-7</span>
                                 <?php 
-                                    $key = array_search("K-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1434,8 +1428,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-8' data-price='30'>K-8</span>
                                 <?php 
-                                    $key = array_search("K-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1445,8 +1439,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-9' data-price='30'>K-9</span>
                                 <?php 
-                                    $key = array_search("K-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1456,8 +1450,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='K-10' data-price='30'>K-10</span>
                                 <?php 
-                                    $key = array_search("K-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("K-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1469,8 +1463,8 @@ $cinema=explode("_",$_GET['time']);
                             </div>
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("L-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1480,8 +1474,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-1' data-price='30'>L-1</span>
                                 <?php 
-                                    $key = array_search("L-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1491,8 +1485,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-2' data-price='30'>L-2</span>
                                 <?php 
-                                    $key = array_search("L-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1502,8 +1496,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-3' data-price='30'>L-3</span>
                                 <?php 
-                                    $key = array_search("L-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1513,8 +1507,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-4' data-price='30'>L-4</span>
                                 <?php 
-                                    $key = array_search("L-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1524,8 +1518,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-5' data-price='30'>L-5</span>
                                 <?php 
-                                    $key = array_search("L-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1535,8 +1529,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-6' data-price='30'>L-6</span>
                                 <?php 
-                                    $key = array_search("L-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1546,8 +1540,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-7' data-price='30'>L-7</span>
                                 <?php 
-                                    $key = array_search("L-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1557,8 +1551,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-8' data-price='30'>L-8</span>
                                 <?php 
-                                    $key = array_search("L-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1568,8 +1562,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='L-9' data-price='30'>L-9</span>
                                 <?php 
-                                    $key = array_search("L-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("L-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1581,8 +1575,8 @@ $cinema=explode("_",$_GET['time']);
                             </div>
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("M-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1592,8 +1586,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-1' data-price='30'>M-1</span>
                                 <?php 
-                                    $key = array_search("M-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1603,8 +1597,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-2' data-price='30'>M-2</span>
                                 <?php 
-                                    $key = array_search("M-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1614,8 +1608,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-3' data-price='30'>M-3</span>
                                 <?php 
-                                    $key = array_search("M-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1625,8 +1619,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-4' data-price='30'>M-4</span>
                                 <?php 
-                                    $key = array_search("M-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1636,8 +1630,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-5' data-price='30'>M-5</span>
                                 <?php 
-                                    $key = array_search("M-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1647,8 +1641,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-6' data-price='30'>M-6</span>
                                 <?php 
-                                    $key = array_search("M-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1658,8 +1652,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-7' data-price='30'>M-7</span>
                                 <?php 
-                                    $key = array_search("M-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1669,8 +1663,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-8' data-price='30'>M-8</span>
                                 <?php 
-                                    $key = array_search("M-9",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-9",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1680,8 +1674,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-9' data-price='30'>M-9</span>
                                 <?php 
-                                    $key = array_search("M-10",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-10",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1691,8 +1685,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='M-10' data-price='30'>M-10</span>
                                 <?php 
-                                    $key = array_search("M-11",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("M-11",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1717,7 +1711,7 @@ $cinema=explode("_",$_GET['time']);
             </div>
                 <?php endif ?>
                
-                <?php if ($cinema[0]=="Cinema 2"): ?>
+                <?php if ($movies_data['screen_id']=="2"): ?>
                      <div class="sits-area ">
                     
                     
@@ -1749,8 +1743,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                  <?php 
-                                    $key = array_search("A-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1760,8 +1754,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" style="<?php  echo "color:$seatColor;" ?>" data-place='A-1' data-price='10'>A-1</span>
                                 <?php 
-                                    $key = array_search("A-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1771,8 +1765,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-2' data-price='10'>A-2</span>
                                  <?php 
-                                    $key = array_search("A-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1782,8 +1776,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-3' data-price='10'>A-3</span>
                                 <?php 
-                                    $key = array_search("A-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1793,8 +1787,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-4' data-price='10'>A-4</span>
                                 <?php 
-                                    $key = array_search("A-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1804,8 +1798,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-5' data-price='10'>A-5</span>
                                 <?php 
-                                    $key = array_search("A-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1815,8 +1809,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-6' data-price='10'>A-6</span>
                                 <?php 
-                                    $key = array_search("A-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1826,8 +1820,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='A-7' data-price='10'>A-7</span>
                                 <?php 
-                                    $key = array_search("A-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("A-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1840,8 +1834,8 @@ $cinema=explode("_",$_GET['time']);
                             
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("B-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1851,8 +1845,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-1' data-price='10'>B-1</span>
                                 <?php 
-                                    $key = array_search("B-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1862,8 +1856,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-2' data-price='10'>B-2</span>
                                 <?php 
-                                    $key = array_search("B-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1873,8 +1867,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-3' data-price='10'>B-3</span>
                                 <?php 
-                                    $key = array_search("B-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1884,8 +1878,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-4' data-price='10'>B-4</span>
                                 <?php 
-                                    $key = array_search("B-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1895,8 +1889,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-5' data-price='10'>B-5</span>
                                 <?php 
-                                    $key = array_search("B-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1906,8 +1900,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='B-6' data-price='10'>B-6</span>
                                 <?php 
-                                    $key = array_search("B-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("B-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1920,8 +1914,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("C-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1931,8 +1925,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-1' data-price='10'>C-1</span>
                                 <?php 
-                                    $key = array_search("C-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1942,8 +1936,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-2' data-price='10'>C-2</span>
                                 <?php 
-                                    $key = array_search("C-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1953,8 +1947,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-3' data-price='10'>C-3</span>
                                 <?php 
-                                    $key = array_search("C-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1964,8 +1958,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-4' data-price='10'>C-4</span>
                                 <?php 
-                                    $key = array_search("C-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1975,8 +1969,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-5' data-price='10'>C-5</span>
                                 <?php 
-                                    $key = array_search("C-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1986,8 +1980,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-6' data-price='10'>C-6</span>
                                 <?php 
-                                    $key = array_search("C-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -1997,8 +1991,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='C-7' data-price='10'>C-7</span>
                                 <?php 
-                                    $key = array_search("C-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("C-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2011,8 +2005,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("D-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2022,8 +2016,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-1' data-price='10'>D-1</span>
                                 <?php 
-                                    $key = array_search("D-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2033,8 +2027,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-2' data-price='10'>D-2</span>
                                 <?php 
-                                    $key = array_search("D-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2044,8 +2038,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-3' data-price='10'>D-3</span>
                                 <?php 
-                                    $key = array_search("D-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2055,8 +2049,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-4' data-price='10'>D-4</span>
                                 <?php 
-                                    $key = array_search("D-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2066,8 +2060,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-5' data-price='10'>D-5</span>
                                 <?php 
-                                    $key = array_search("D-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2077,8 +2071,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='D-6' data-price='10'>D-6</span>
                                 <?php 
-                                    $key = array_search("D-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("D-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2091,8 +2085,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("E-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2102,8 +2096,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-1' data-price='20'>E-1</span>
                                 <?php 
-                                    $key = array_search("E-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2113,8 +2107,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-2' data-price='20'>E-2</span>
                                 <?php 
-                                    $key = array_search("E-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2124,8 +2118,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-3' data-price='20'>E-3</span>
                                 <?php 
-                                    $key = array_search("E-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2135,8 +2129,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-4' data-price='20'>E-4</span>
                                 <?php 
-                                    $key = array_search("E-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2146,8 +2140,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-5' data-price='20'>E-5</span>
                                 <?php 
-                                    $key = array_search("E-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2157,8 +2151,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-6' data-price='20'>E-6</span>
                                 <?php 
-                                    $key = array_search("E-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2168,8 +2162,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='E-7' data-price='20'>E-7</span>
                                 <?php 
-                                    $key = array_search("E-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("E-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2182,8 +2176,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("F-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2193,8 +2187,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-1' data-price='20'>F-1</span>
                                 <?php 
-                                    $key = array_search("F-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2204,8 +2198,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-2' data-price='20'>F-2</span>
                                 <?php 
-                                    $key = array_search("F-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2215,8 +2209,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-3' data-price='20'>F-3</span>
                                 <?php 
-                                    $key = array_search("F-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2226,8 +2220,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-4' data-price='20'>F-4</span>
                                 <?php 
-                                    $key = array_search("F-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2237,8 +2231,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-5' data-price='20'>F-5</span>
                                 <?php 
-                                    $key = array_search("F-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2248,8 +2242,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='F-6' data-price='20'>F-6</span>
                                 <?php 
-                                    $key = array_search("F-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("F-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2262,8 +2256,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("G-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2273,8 +2267,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-1' data-price='20'>G-1</span>
                                 <?php 
-                                    $key = array_search("G-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2284,8 +2278,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-2' data-price='20'>G-2</span>
                                 <?php 
-                                    $key = array_search("G-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2295,8 +2289,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-3' data-price='20'>G-3</span>
                                 <?php 
-                                    $key = array_search("G-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2306,8 +2300,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-4' data-price='20'>G-4</span>
                                 <?php 
-                                    $key = array_search("G-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2317,8 +2311,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-5' data-price='20'>G-5</span>
                                 <?php 
-                                    $key = array_search("G-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2328,8 +2322,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-6' data-price='20'>G-6</span>
                                 <?php 
-                                    $key = array_search("G-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2339,8 +2333,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='G-7' data-price='20'>G-7</span>
                                 <?php 
-                                    $key = array_search("G-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("G-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2353,8 +2347,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row">
                                 <?php 
-                                    $key = array_search("H-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2364,8 +2358,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-1' data-price='20'>H-1</span>
                                 <?php 
-                                    $key = array_search("H-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2375,8 +2369,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-2' data-price='20'>H-2</span>
                                 <?php 
-                                    $key = array_search("H-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2386,8 +2380,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-3' data-price='20'>H-3</span>
                                 <?php 
-                                    $key = array_search("H-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2397,8 +2391,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-4' data-price='20'>H-4</span>
                                 <?php 
-                                    $key = array_search("H-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2408,8 +2402,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-5' data-price='20'>H-5</span>
                                 <?php 
-                                    $key = array_search("H-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2419,8 +2413,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='H-6' data-price='20'>H-6</span>
                                 <?php 
-                                    $key = array_search("H-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("H-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2433,8 +2427,8 @@ $cinema=explode("_",$_GET['time']);
 
                             <div class="sits__row additional-margin">
                                 <?php 
-                                    $key = array_search("I-1",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-1",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2444,8 +2438,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-1' data-price='30'>I1</span>
                                 <?php 
-                                    $key = array_search("I-2",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-2",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2455,8 +2449,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-2' data-price='30'>I-2</span>
                                 <?php 
-                                    $key = array_search("I-3",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-3",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2466,8 +2460,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-3' data-price='30'>I-3</span>
                                 <?php 
-                                    $key = array_search("I-4",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-4",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2477,8 +2471,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-4' data-price='30'>I-4</span>
                                 <?php 
-                                    $key = array_search("I-5",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-5",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2488,8 +2482,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-5' data-price='30'>I-5</span>
                                 <?php 
-                                    $key = array_search("I-6",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-6",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2499,8 +2493,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-6' data-price='30'>I-6</span>
                                 <?php 
-                                    $key = array_search("I-7",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-7",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2510,8 +2504,8 @@ $cinema=explode("_",$_GET['time']);
                                 ?>
                                 <span class="sits__place sits-price--cheap <?php echo $class ?>" data-place='I-7' data-price='30'>I-7</span>
                                 <?php 
-                                    $key = array_search("I-8",$list); 
-                                    if (array_key_exists($key,$list)){
+                                    $key = array_search("I-8",$this->data['selected_data']); 
+                                    if (array_key_exists($key,$this->data['selected_data'])){
                                         $class = 'sits-state--not';
                                     }
 
@@ -2553,16 +2547,19 @@ $cinema=explode("_",$_GET['time']);
         
 
         <div class="clearfix"></div>
-         <form id='contact-info' method='post' action="<?php echo base_url() ?>web/pause_booking" novalidate="" class="form contact-info">
-        <!--<form id='contact-info' method='post' action="<?php echo base_url() ?>web/step3" novalidate="" class="form contact-info">-->
+        <!--  <form id='contact-info' method='post' action="<?php echo base_url() ?>web/pause_booking" novalidate="" class="form contact-info"> -->
+        <form id='contact-info' method='GET' action="<?php echo base_url() ?>web/step3" novalidate="" class="form contact-info">
                   
-     <input type="text" name="productID" value="<?php echo $_GET['movie_id'] ?>">
-     <input type="text" name="movie_name" value="<?php echo $_GET['movie_name'] ?>">
-        <input type="text" name="date_time" value="<?php echo $_GET['date_time'] ?>">
-        <input type="text" name="cinema_name" value="<?php echo $movies_data['screen_id'] ?>">
-        <input type="text" name="show_time" value="<?php echo $movies_data['time'] ?>"> 
-            <input type='text' name='choosen-cost' class="choosen-cost">
-            <input type='text' name='choosen-sits' class="choosen-sits">
+     <input type="hidden" name="movie_id" value="<?php echo $_GET['movie_id'] ?>">
+     <input type="hidden" name="show_time_id" value="<?php echo $_GET['show_time_id'] ?>">
+     <input type="hidden" name="movie_name" value="<?php echo $_GET['movie_name'] ?>">
+     <input type="hidden" name="distributer_id" value="<?php echo $_GET['distributer_id'] ?>">
+
+        <input type="hidden" name="date_time" value="<?php echo $_GET['date_time'] ?>">
+        <input type="hidden" name="cinema_name" value="<?php echo $movies_data['screen_id'] ?>">
+        <input type="hidden" name="show_time" value="<?php echo $movies_data['time'] ?>"> 
+            <input type='hidden' name='choosen-cost' class="choosen-cost">
+            <input type='hidden' name='choosen-sits' class="choosen-sits">
 
 
             <div class="booking-pagination booking-pagination--margin">

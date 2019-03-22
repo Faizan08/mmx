@@ -78,8 +78,7 @@
           
                                 </div>
                             </div>
-
-<p class="movie__option"><strong>Actors: </strong>
+                                <p class="movie__option"><strong>Actors: </strong>
                                 <a href="#">
                                     <?php echo $detail['actors'] ?>
                                 </a>
@@ -120,13 +119,15 @@
     
 
 ?>
-<form method="get0" action="<?php echo base_url() ?>web/step2">
+<form method="GET" action="<?php echo base_url() ?>web/step2">
     <section class="container">
         <div class="col-sm-12">
             <div class="choose-indector choose-indector--film">
                 <strong>Choosen: </strong><span class="choosen-area"><?php echo $detail['title'] ?></span>
             </div>
             <input type="hidden" name="movie_name" value="<?php echo $detail['title'] ?>">
+            <input type="hidden" name="distributer_id" value="<?php echo $detail['distributer_id'] ?>">
+
             <h2 class="page-heading">Select Date</h2>
 
             <div class="choose-container choose-container--short">

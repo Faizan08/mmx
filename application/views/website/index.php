@@ -414,28 +414,35 @@
         <!--end slider -->
         
         
-        <!-- Main content -->
+<!-- Main content -->
+
 <section class="container">
+<!-- first -->
     <div class="movie-best large_carousel" id="">
        <div class="row">
             <div class="col-sm-10 col-sm-offset-1 movie-best__rating">Movies of the month</div>
        </div>
         <div class="col-sm-12 change--col">
-            <?php foreach ($best_choice as $movie): ?>
+            <?php foreach ($featured_movies as $movie): ?>
                 <div class="movie-beta__item ">
-                    <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>">
-                    <img alt='' style="    height: 279px;
-                    " src="<?php echo base_url() ?>uploads/product/<?php echo $movie['image'] ?>">
+                    <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>">
+                    <img alt='' style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['poster'] ?>">
                     </a>
-                    <span class="best-rate"><?php echo $movie['imd_rating'] ?></span>
+                    <span class="best-rate"><?php echo $movie['rating'] ?></span>
                     <ul class="movie-beta__info">
                         <li>
-                            <p class="movie__time">169 min</p>
+                            <p class="movie__time"><?php echo $movie['duration'] ?> min</p>
+
+                             <?php
+                                $movie['categoryID'] = str_replace(',', ', ', $movie['categoryID']);
+                                ?>
+
+  
                             <p><?php echo $movie['categoryID'] ?> </p>
                             <p>38 comments</p>
                         </li>
                         <li class="last-block">
-                            <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>" class="slide__link">more</a>
+                            <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="slide__link">more</a>
                         </li>
                     </ul>
                 </div>     
@@ -457,44 +464,55 @@
         <div class="carousel-inner">
           <div class="item active">
             <div class="col-xs-12 col-sm-12 col-md-3 movie movie--test2 movie--test--dark movie--test--left"><!-- <div class="" style=" width: 332%;     margin-left: -29px;  height: 279px;"> -->
-                      <div class="movie__images">
-                          <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>" class="movie-beta__link">
-                              <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['image'] ?>">
-                          </a>
-                      </div>
-                      <div class="movie__info">
-                          <a href='<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
-
-                          <p class="movie__time"><?php echo $movie['length'] ?> min</p>
-
-                          <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
-                          
-                          <div class="movie__rate">
-                              <span class="movie__rating"><?php echo $movie['imd_rating'] ?></span>
-                          </div>               
-                      </div>
+                <div class="movie__images">
+                    <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="movie-beta__link">
+                        <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['poster'] ?>">
+                    </a>
                 </div>
+                <div class="movie__info">
+                    <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
+
+                    <p class="movie__time"><?php echo $movie['duration'] ?> min</p>
+
+                     <?php
+                          $movie['categoryID'] = str_replace(',', ', ', $movie['categoryID']);
+                          ?>
+
+
+                    <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
+                    
+                    <div class="movie__rate">
+                        <span class="movie__rating"><?php echo $movie['rating'] ?></span>
+                    </div>               
+                </div>
+              </div>
           </div>
-           <?php foreach ($best_choice as $movie): ?>
+           <?php foreach ($featured_movies as $movie): ?>
           <div class="item">
-            <div class="col-xs-12 col-sm-12 col-md-3"><div class="movie movie--test2 movie--test--dark movie--test--left" style=" width: 332%;      height: 279px;">
-                            <div class="movie__images">
-                                <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>" class="movie-beta__link">
-                                    <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['image'] ?>">
-                                </a>
-                            </div>
-                            <div class="movie__info">
-                                <a href='<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
+            <div class="col-xs-12 col-sm-12 col-md-3">
+              <div class="movie movie--test2 movie--test--dark movie--test--left" style=" width: 332%;height: 279px;">
+                  <div class="movie__images">
+                      <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="movie-beta__link">
+                          <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['poster'] ?>">
+                      </a>
+                  </div>
+                  <div class="movie__info">
+                      <a href='<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
 
-                                <p class="movie__time"><?php echo $movie['length'] ?> min</p>
+                      <p class="movie__time"><?php echo $movie['duration'] ?> min</p>
 
-                                <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
-                                
-                                <div class="movie__rate">
-                                    <span class="movie__rating"><?php echo $movie['imd_rating'] ?></span>
-                                </div>               
-                            </div>
-                        </div></div>
+                       <?php
+                      $movie['categoryID'] = str_replace(',', ', ', $movie['categoryID']);
+                      ?>
+
+                      <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
+                      
+                      <div class="movie__rate">
+                          <span class="movie__rating"><?php echo $movie['rating'] ?></span>
+                      </div>               
+                  </div>
+              </div>
+            </div>
           </div>
         <?php endforeach ?>
         </div>
@@ -506,6 +524,9 @@
 </div>
         </div>
     </div>
+
+
+    <!-- first end -->
     <div class="clearfix"></div>
     <div class="col-sm-12">
         <h2 class="page-heading">Book Tickets</h2>
@@ -513,11 +534,12 @@
             <div class="col-sm-12">
                 <div class="row" style="background-color: #ffd564; font: 14px 'aleobold', sans-serif; border-radius: 9px;">
                 <div class="col-sm-12"><br>
-                     <form action="<?php echo base_url() ?>web/pause_booking" method="get">
+                     <form action="<?php echo base_url() ?>web/step2" method="get">
                      <!--<form action="<?php echo base_url() ?>web/step2" method="get"> -->
                     <div class="form-group row">
                         
                         <div class="col-sm-3">
+
                             <select class="form-control movies" name="movie_id" required="" type="text" id="example-text-input">
                                 <option value="">Select Movie</option>
                                 <?php 
@@ -526,7 +548,7 @@
 
                                         // echo '<option value="'.$m['movie_id'].'">'.$m['title'].'</option>';
 
-                                         echo '<option value="'.$m['date'].'" data="'.$m['date'].'">'.$m['title'].'</option>';
+                                         echo '<option value="'.$m['movie_id'].'" data="'.$m['movie_id'].'">'.$m['title'].'</option>';
                                         
                                     }
 
@@ -535,9 +557,10 @@
                                 <!-- <option value="One">One</option>
                                 <option value="Two">Two</option> -->
                             </select>
+
                         </div>
                         <div class="col-sm-3">
-                            <select class="form-control date" name="date_time" required="" type="text" id="example-text-input">
+                            <select class="form-control date" name="date_time" required="" type="text" id="date_time">
                                 <option value="">Select Date</option>
 
                                
@@ -551,15 +574,19 @@
                             </select> 
                         </div>
                         <div class="col-sm-3">
-                            <select class="form-control time" name="time" required="" type="text" id="example-text-input">
+                            <select class="form-control time" name="timeid" required="" type="text" id="example-text-input">
                                 <option value="">Select Time</option>
                             </select>
+
                         </div>
                     </div>
                    
                      <div class="form-group row col-md-12">
                         <input type="submit" value="Book Tickets" class="btn btn-primary pull-right">
                     </div> 
+
+
+
                 </form>
                 </div>
           
@@ -884,31 +911,34 @@
             <div class="mega-select pull-right">
               <span class="mega-select__point">Search by</span>
               <ul class="mega-select__sort">
-                  
-                  
                   <li class="filter-wrap"><a href="#" class="mega-select__filter filter--active" data-filter="film-category">Category</a></li>
-                  <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter="actors">Actors</a></li>
+                  <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter="actors">Actor</a></li>
                   <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter="director">Director</a></li>
                   <li class="filter-wrap"><a href="#" class="mega-select__filter" data-filter="country">Country</a></li>
               </ul>
-<form method="post" action="<?php echo base_url('web/search') ?>">
-              <input name="search" type="text" class="select__field">
-              
-              <div class="select__btn">
-                <!-- <input type="submit" name="city" value="location" class="btn btn-md btn--danger location" style="display: none;"> -->
-                <input type="submit" name="city" value="cinema" data-attr="cinema" class="btn btn-md btn--danger cinema" style="display: none;">
-<input type="submit" name="city" value="categoryID" data-attr="film-category" class="btn btn-md btn--danger film-category" style="display: none;">
-<input type="submit" name="city" value="actors" data-attr="actors" class="btn btn-md btn--danger actors" style="display: none;">
-<input type="submit" name="city" value="director" data-attr="director" class="btn btn-md btn--danger director" style="display: none;">
-<input type="submit" name="city" value="country" data-attr="country" class="btn btn-md btn--danger country" style="display: none;">
 
-                <a href="#" class="btn btn-md btn--danger cinema" data-attr="cinema" style="display: none;">Search <span class="hidden-exrtasm">suitable cimema</span></a>
-                <a href="#" class="btn btn-md btn--danger film-category" data-attr="film-category" style="display: inline-block;">Search <span class="hidden-exrtasm">best category</span></a>
-                <a href="#" class="btn btn-md btn--danger actors" data-attr="actors" style="display: none;">Search <span class="hidden-exrtasm">talented actors</span></a>
-                <a href="#" class="btn btn-md btn--danger director" data-attr="director" style="display: none;">Search <span class="hidden-exrtasm">favorite director</span></a>
-                <a href="#" class="btn btn-md btn--danger country" data-attr="country" style="display: none;">Search <span class="hidden-exrtasm">produced country</span></a>
-              </div>
-</form>
+                <form method="post" action="<?php echo base_url('web/search') ?>">
+                    <input name="search" type="text" class="select__field">
+                    
+                    <div class="select__btn">
+                      <!-- <input type="submit" name="city" value="location" class="btn btn-md btn--danger location" style="display: none;"> -->
+                      <input type="submit" name="city" value="cinema" data-attr="cinema" class="btn btn-md btn--danger cinema" style="display: none;">
+
+                      <input type="submit" name="city" value="categoryID" data-attr="film-category" class="btn btn-md btn--danger film-category" style="display: none;">
+
+                      <input type="submit" name="city" value="actor" data-attr="actors" class="btn btn-md btn--danger actors" style="display: none;">
+
+                      <input type="submit" name="city" value="director" data-attr="director" class="btn btn-md btn--danger director" style="display: none;">
+
+                      <input type="submit" name="city" value="country" data-attr="country" class="btn btn-md btn--danger country" style="display: none;">
+
+                      <a href="#" class="btn btn-md btn--danger cinema" data-attr="cinema" style="display: none;">Search <span class="hidden-exrtasm">suitable cimema</span></a>
+                      <a href="#" class="btn btn-md btn--danger film-category" data-attr="film-category" style="display: inline-block;">Search <span class="hidden-exrtasm">best category</span></a>
+                      <a href="#" class="btn btn-md btn--danger actors" data-attr="actors" style="display: none;">Search <span class="hidden-exrtasm">talented actors</span></a>
+                      <a href="#" class="btn btn-md btn--danger director" data-attr="director" style="display: none;">Search <span class="hidden-exrtasm">favorite director</span></a>
+                      <a href="#" class="btn btn-md btn--danger country" data-attr="country" style="display: none;">Search <span class="hidden-exrtasm">produced country</span></a>
+                    </div>
+                </form>
              
             </div>
         </div>
@@ -923,21 +953,33 @@
                <?php foreach ($movies as $movie): ?>
                     <div class="col-md-6">
                         <div class="movie movie--test2 movie--test--dark movie--test--left" style="height: 279px;">
+
+
+
                             <div class="movie__images">
-                                <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>" class="movie-beta__link">
-                                    <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['image'] ?>">
+                                <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="movie-beta__link">
+                                    <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['poster'] ?>">
                                 </a>
                             </div>
-                            <div class="movie__info">
-                                <a href='<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>' class="movie__title"><?php echo $movie['title'] ?>   </a>
 
-                                <p class="movie__time"><?php echo $movie['length'] ?> min</p>
+
+
+                            <div class="movie__info">
+                                
+                                <a href='<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>' class="movie__title"><?php echo $movie['title'] ?>   </a>
+
+                                <p class="movie__time"><?php echo $movie['duration'] ?> min</p>
+
+                                <?php
+                                $movie['categoryID'] = str_replace(',', ', ', $movie['categoryID']);
+                                ?>
 
                                 <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
                                 
                                 <div class="movie__rate">
-                                    <span class="movie__rating"><?php echo $movie['imd_rating'] ?></span>
-                                </div>               
+                                    <span class="movie__rating"><?php echo $movie['rating'] ?></span>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -949,19 +991,19 @@
           <div class="item active">
             <div class="col-xs-12 col-sm-12 col-md-3 movie movie--test2 movie--test--dark movie--test--left"><!-- <div class="" style=" width: 332%;     margin-left: -29px;  height: 279px;"> -->
               <div class="movie__images">
-                  <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>" class="movie-beta__link">
-                      <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['image'] ?>">
+                  <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="movie-beta__link">
+                      <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['poster'] ?>">
                   </a>
               </div>
               <div class="movie__info">
-                  <a href='<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
+                  <a href='<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
 
-                  <p class="movie__time"><?php echo $movie['length'] ?> min</p>
+                  <p class="movie__time"><?php echo $movie['duration'] ?> min</p>
 
                   <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
                   
                   <div class="movie__rate">
-                      <span class="movie__rating"><?php echo $movie['imd_rating'] ?></span>
+                      <span class="movie__rating"><?php echo $movie['rating'] ?></span>
                   </div>               
               </div>
             </div>
@@ -971,19 +1013,19 @@
             <div class="col-xs-12 col-sm-12 col-md-3">
               <div class="movie movie--test2 movie--test--dark movie--test--left" style=" width: 332%;      height: 279px;">
                   <div class="movie__images">
-                      <a href="<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>" class="movie-beta__link">
-                          <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['image'] ?>">
+                      <a href="<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>" class="movie-beta__link">
+                          <img alt=''  style="height: 279px;" src="<?php echo base_url() ?>uploads/product/<?php echo $movie['poster'] ?>">
                       </a>
                   </div>
                   <div class="movie__info">
-                      <a href='<?php echo base_url() ?>web/details/<?php echo $movie['productID'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
+                      <a href='<?php echo base_url() ?>web/details/<?php echo $movie['movie_id'] ?>' class="movie__title"><?php echo $movie['title'] ?> (<?php echo $movie['year'] ?>)  </a>
 
-                      <p class="movie__time"><?php echo $movie['length'] ?> min</p>
+                      <p class="movie__time"><?php echo $movie['duration'] ?> min</p>
 
                       <p class="movie__option"><a href="#"><?php echo $movie['categoryID'] ?></a> </p>
                       
                       <div class="movie__rate">
-                          <span class="movie__rating"><?php echo $movie['imd_rating'] ?></span>
+                          <span class="movie__rating"><?php echo $movie['rating'] ?></span>
                       </div>               
                   </div>
               </div>
@@ -1124,6 +1166,7 @@
 <script type="text/javascript">
     $('.movies').change(function() {
         var id = $(this).val()
+
         jQuery.ajax({
             url: '<?php echo base_url() ?>/web/get_movies_dates/'+id,
             dataType: 'json',
@@ -1136,7 +1179,7 @@
                 console.log(response)
                 $('.date option').not('option:first').remove()
                 for (var i = 0; i < response.length; i++) {
-                    $('.date').append('<option value="'+response[i].showdate+'">'+response[i].showdate+'</option>')
+                    $('.date').append('<option value="'+response[i].date+'">'+response[i].date+'</option>')
                 }
             }
         })
@@ -1156,12 +1199,12 @@
                 console.log(response)
                 $('.cinema option').not('option:first').remove()
                 for (var i = 0; i < response.length; i++) {
-                    $('.cinema').append('<option value="'+response[i].cinema_name+'">'+response[i].cinema_name+'</option>')
+                    $('.cinema').append('<option value="'+response[i].screen_id+'">'+response[i].screen_id+'</option>')
                 }
             }
         })
     })
-    $('.cinema').change(function() {
+   $('.cinema').change(function() {
         var id = $('.movies').val()
         var date = $('.date').val()
         var cinema = $(this).val()
@@ -1174,16 +1217,19 @@
             method: 'GET',
             type: 'GET', // For jQuery < 1.9
             success: function(response){
+
+               
                 //console.log(response)
                 //var times = response.split(',')
                 ///console.log(times)
                 $('.time option').not('option:first').remove()
                 for (var i = 0; i < response.length; i++) {
-                    $('.time').append('<option value="'+cinema+'_'+response[i]+'">'+response[i]+'</option>')
-                }
+                    $('.time').append('<option value="'+response[i]+'">'+response[i]+'</option>')
+                } 
             }
         })
     })
+
     $('.time').change(function() {
         var id = $('.movies').val()
         var date = $('.date').val()
@@ -1207,6 +1253,7 @@
             }
         })
     })
+    
 </script>
 <script type="text/javascript">
     $('.select__btn a').click(function(){
@@ -1316,7 +1363,7 @@ sortTable($('#table4'),'asc');
 
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#facebok_nodal').modal('show');
+        // $('#facebok_nodal').modal('show');
     });
    /* setTimeout(function(){
   $('#facebok_nodal').modal('hide')

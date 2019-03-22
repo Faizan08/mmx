@@ -45,7 +45,6 @@
     }
 }
 
-
 @media screen and (max-width: 360px) {
 
     .set-height{
@@ -85,25 +84,26 @@
                         <div class="col-md-4">
                             <img alt='' width="200" src="<?php  echo base_url() ?>uploads/product/<?php echo $detail['poster']?>" class="">
                         </div>
+                        
                         <div class="col-md-8">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <p class="movie__time">
-                                <?php echo $detail['duration'] ?> min</p>
+                                    <p class="movie__option">
+                                <?php echo $detail['duration'] ?> <strong> min </strong></p>
 
                             <p class="movie__option"><strong>Country: </strong>
                                 <a href="#">
-                                    <?php echo $detail['country'] ?>
+                                    <?php echo $moviedetails['country'] ?>
                                 </a>
                             </p>
                             <p class="movie__option"><strong>Year: </strong>
                                 <a href="#">
-                                    <?php echo $detail['year'] ?>
+                                    <?php echo $moviedetails['year'] ?>
                                 </a>
                             </p>
                             <p class="movie__option"><strong>Category: </strong>
                                 <a href="#">
-                                    <?php echo $detail['categoryID'] ?>
+                                    <?php echo $moviedetails['categoryID'] ?>
                                 </a>
                             </p>
                             <p class="movie__option"><strong>Release date: </strong>
@@ -113,7 +113,7 @@
                             </p>
                             <p class="movie__option"><strong>Director: </strong>
                                 <a href="#">
-                                    <?php echo $detail['director'] ?>
+                                    <?php echo $moviedetails['director'] ?>
                                 </a>
                             </p>
                             
@@ -123,11 +123,12 @@
                                     
          
          
-          <div class="main_form" style="padding: 3px;background:#eee;">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="<?php echo $detail['trailer'] ?>"></iframe>
-          </div>
-          </div>
+                          <div class="main_form" style="padding: 3px;background:#eee;">
+                              <div class="embed-responsive embed-responsive-16by9">
+                                <!-- <iframe class="embed-responsive-item" src=""></iframe> -->
+                                <?php echo $detail['trailor'] ?>
+                              </div>
+                          </div>
           
                                 </div>
                             </div>
@@ -139,12 +140,12 @@
                             </p>
                             <p class="movie__option"><strong>Age restriction: </strong>
                                 <a href="#">
-                                    <?php echo $detail['age_restriction'] ?>
+                                    <?php echo $moviedetails['age_restriction'] ?>
                                 </a>
                             </p>
                             <p class="movie__option"><strong>Box office: </strong>
                                 <a href="#">
-                                    <?php echo $detail['box_office'] ?>
+                                    <?php echo $moviedetails['box_office'] ?>
                                 </a>
                             </p>
                         </div>
@@ -184,6 +185,9 @@
 
             <div class="choose-container choose-container--short">
                 <input type="hidden" name="movie_id" value="<?php echo $detail['movie_id']?>">
+
+                <input type="hidden" name="distributer_id" value="<?php echo $detail['distributer_id']?>">
+
                 <div class="col-sm-3">
 
                     <select class="form-control sel" name="date_time" id="sel">
